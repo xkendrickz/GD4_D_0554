@@ -1,5 +1,5 @@
 <?php
-    $host = "localhost/";
+    $host = "localhost";
     $user = "root";
     $pass = "";
     $name = "gd4_d_0554";
