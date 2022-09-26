@@ -9,10 +9,10 @@
     <hr>
 
     <?php   
-    include ('../db.php'); 
-    $id = $_SESSION['user']['id'];
+    include ('../db.php');
+    
 
-    $query = mysqli_query($con, "SELECT * FROM users WHERE id = '$id'") or die(mysqli_error($con));
+    $query = mysqli_query($con, "SELECT * FROM series WHERE id = '$id'") or die(mysqli_error($con));
     $user = mysqli_fetch_assoc($query);
 
         echo'
@@ -32,7 +32,7 @@
                     </div>
                     <div>
                         <label for="exampleInputEmail1" class="formlabel">Membership</label>
-                        <select class="form-select" aria-label="Default select example" name="membership" multiple class="chosen-select" id="membership">
+                        <select class="form-select" aria-label="Default select example" name="membership" id="membership">
                             <option value="" disabled selected style="display: none;">'.$user['membership'].'</option>
                             <option value="Reguler">Reguler</option>
                             <option value="Platinum">Platinum</option>
@@ -40,7 +40,7 @@
                         </select>
                     </div>
                     <div class="d-grid gap-2"> 
-                        <a class="btn btn-primary" href="../page/profilePage.php" name="edit" role="button">Edit Profile</a>
+                        <a class="btn btn-primary" href="../page/profilePage.php" role="button">Edit Profile</a>
                     </div>
                 </form>
             </div>';

@@ -2,7 +2,7 @@
     $host = "localhost";
     $user = "root";
     $pass = "";
-    $name = "gd4_d_0554";
+    $name = "GD4_D_0554";
 
     $con = mysqli_connect($host,$user,$pass,$name);
 

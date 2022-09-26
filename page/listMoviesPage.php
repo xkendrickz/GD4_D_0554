@@ -13,7 +13,7 @@
                 <th scope="col">No</th>
                 <th scope="col">Name</th>
                 <th scope="col">Genre</th>
-                <th scope="col">Realese</th>
+                <th scope="col">Release</th>
                 <th scope="col">Season</th>
                 <th scope="col"></th>
             </tr>

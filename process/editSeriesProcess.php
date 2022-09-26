@@ -4,11 +4,13 @@
         include ('../db.php'); 
         $id = $_SESSION['user']['id'];
         $name = $_POST['name']; 
-        $phonenum = $_POST['phonenum']; 
-        $membership = $_POST['membership']; 
-        $email = $_POST['email']; 
-
-        $query = mysqli_query($con, "UPDATE users SET name='$name', phonenum='$phonenum', membership='$membership', email='$email'  WHERE id='$id'") 
+        $genre = $_POST['genre']; 
+        $release = $_POST['release']; 
+        $episode = $_POST['episode'];
+        $season = $_POST['season'];
+        $synopsis = $_POST['synopsis'];
+        
+        $query = mysqli_query($con, "UPDATE users SET name='$name', genre='$genre', release='$release', episode='$episode', season='$season', synopsis='$synopsis'  WHERE id='$id'") 
         or die(mysqli_error($con)); 
         
             if($query){ 
@@ -18,13 +20,13 @@
                 echo 
                 '<script> 
                     alert("Edit Success"); 
-                    window.location = "../page/profilePage.php" 
+                    window.location = "../page/listSeries.php" 
                 </script>'; 
             }else{ 
                 echo 
                 '<script> 
                     alert("Edit Failed"); 
-                    window.location = "../page/profilePage.php" 
+                    window.location = "../page/listSeries.php" 
                 </script>'; 
             } 
     }else {
